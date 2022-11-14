@@ -125,3 +125,36 @@ function mykeydown(e){
         console.log("c");
     }
 }
+
+function up(){
+    if (player_y>=0){
+        player_y=player_y-block_image_height;
+        canvas.remove(player_object);
+        update_player();
+    }
+}
+
+function down(){
+    if (player_y<=500){
+        player_y=player_y+block_image_height;
+        canvas.remove(player_object);
+        update_player();
+    }
+}
+
+function left(){
+    if (player_x>=0){
+        player_x=player_x-block_image_width;
+        canvas.remove(player_object);
+        update_player();
+    }
+}
+
+function right(){
+    if (player_x<=900){
+        player_x=player_x+block_image_width;
+        canvas.remove(player_object);
+        update_player();
+    }
+}
+
